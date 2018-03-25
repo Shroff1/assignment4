@@ -1,0 +1,43 @@
+doctype html
+html
+  head
+    title Laptop Order Inquiry
+  body
+    if LaptopName
+      include output
+    else
+      h1 Laptop Order Inquiry.
+    form(action="/users/" method="POST")
+      label(for="partNumber") Part Number:
+      input#partNumber(type="text" name="partNumber"
+      value="" size="50")
+      br
+      br
+      label(for="laptopName") laptopName:
+      input#laptopName(type="text" name="laptopName"
+      value="" size="50")
+      br
+      br
+      label(for="laptopQty") laptopQty:
+      input#laptopQty(type="number" name="laptopQty"
+      value="" size="50")
+      br
+      br
+      label(for="countryOrder") country Order:
+      input#countryOrder(type="text" name="countryOrder"
+      value="" size="50")
+      br
+      br
+      label(for="targetPrice") Landed Target Price $:
+      input#targetPrice(type="text" name="targetPrice"
+      value="" size="50")
+      br
+      br
+      label(for="repName") Representative Name:
+      input#repName(type="text" name="repName"
+      value="" size="50")
+      br
+      br
+      input#subBtn(type="submit"  name="submit"
+      value="Submit")
+      include output

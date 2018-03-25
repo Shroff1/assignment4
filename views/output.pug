@@ -1,0 +1,24 @@
+br
+br
+h1 AK Multinational LLC Order List:
+  br
+  br
+  table(Style="width:100%", border="1")
+    tr
+      th Part Number
+      th Laptop Name
+      th Quantity
+      th Country Order
+      th targetPrice
+      th Representative Name
+      th Order Date
+
+    - for (var x = 0; x < laptop.length; x++)
+        tr
+          td #{laptop[x].partNumber}
+          td #{laptop[x].laptopName}
+          td #{laptop[x].laptopQty}
+          td #{laptop[x].countryOrder}
+          td #{laptop[x].targetPrice}
+          td #{laptop[x].repName}
+          td #{laptop[x].createdAt}
